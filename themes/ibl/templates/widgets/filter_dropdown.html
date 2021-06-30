@@ -1,0 +1,110 @@
+{% load forum_tags %}
+{% load ibl_tags %}
+
+{% with params=request.GET.urlencode %}
+
+            <div class="ui floating dropdown labeled icon button">
+
+            <i class="{% get_icon string=limit default='all' %}"></i>
+            <span class="tablet">{% get_wording prefix="" filtered=limit default="all" %}</span>
+
+            <div class="menu">
+                <a class="item" href="{% relative_url 'all' 'limit' params %}">
+                    <i class="{% get_icon 'all' %}"></i>all time
+                </a>
+
+                <a class="item" href="{% relative_url 'today' 'limit' params %}">
+                    <i class="{% get_icon 'today' %}"></i>today
+                </a>
+
+                <a class="item" href="{% relative_url 'week' 'limit' params %}">
+                    <i class="{% get_icon 'week' %}"></i>this week
+                </a>
+
+                <a class="item" href="{% relative_url 'month' 'limit' params %}">
+                    <i class="{% get_icon 'month' %}"></i>this month
+                </a>
+
+                <a class="item" href="{% relative_url 'year' 'limit' params %}">
+                    <i class="{% get_icon 'year' %}"></i>this year
+                </a>
+
+            </div>
+        </div>
+
+            <div class="ui floating dropdown labeled icon button">
+            <i class="{% get_icon string=order default='rank' %}"></i>
+            <span class="tablet">{% get_wording prefix="" filtered=order default="rank" %}</span>
+            <i class="dropdown icon"></i>
+
+            <div class="menu">
+                <a class="item" href="{% relative_url 'rank' 'order' params %}">
+                    <i class="{% get_icon 'rank' %}"></i>Latest
+                </a>
+
+                <a class="item" href="{% relative_url 'views' 'order' params %}">
+                    <i class="{% get_icon 'views' %}"></i>Views
+                </a>
+
+                <a class="item" href="{% relative_url 'votes' 'order' params %}">
+                    <i class="{% get_icon 'votes' %}"></i>Votes
+                </a>
+
+                <a class="item" href="{% relative_url 'replies' 'order' params %}">
+                    <i class="{% get_icon 'replies' %}"></i>Replies
+                </a>
+
+            </div>
+        </div>
+
+<div class="ui floating dropdown labeled icon button">
+  <i class="tag icon"></i>
+  <span class="text">Tags</span>
+  <div class="menu">
+    <div class="ui icon search input">
+      <i class="search icon"></i>
+      <input type="text" placeholder="Search tags...">
+    </div>
+    <div class="scrolling menu">
+      <div class="item">
+        <div class="ui red empty circular label"></div>
+        Important
+      </div>
+      <div class="item">
+        <div class="ui blue empty circular label"></div>
+        Announcement
+      </div>
+      <div class="item">
+        <div class="ui black empty circular label"></div>
+        Cannot Fix
+      </div>
+      <div class="item">
+        <div class="ui purple empty circular label"></div>
+        News
+      </div>
+      <div class="item">
+        <div class="ui orange empty circular label"></div>
+        Enhancement
+      </div>
+      <div class="item">
+        <div class="ui empty circular label"></div>
+        Change Declined
+      </div>
+      <div class="item">
+        <div class="ui yellow empty circular label"></div>
+        Off Topic
+      </div>
+      <div class="item">
+        <div class="ui pink empty circular label"></div>
+        Interesting
+      </div>
+      <div class="item">
+        <div class="ui green empty circular label"></div>
+        Discussion
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endwith %}

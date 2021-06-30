@@ -1,0 +1,160 @@
+:root {
+    --active-item-color: #337ab7;
+    --active-item-bg-color:#eff0ef;
+    --tag-color: #1881c2;
+    --tag-background:#ececec;
+    --quetion-background:#87B13F;
+    --menu-bg-color: white;
+    --has-answers-background: #1881C2;
+    --tutorial-background:#87B13F;
+    --menu-topics-bg-color:#ADD8E6;
+    --menu-header-hover: #337ab7;
+    --menu-topic-hover: white;
+    --menu-header-bg-hover:#eff0ef;
+    --menu-topics-bg-hover:#fbfdef;
+    --menu-topics-hover:  #2a2b2b;
+    --menu-header-color:#2a2b2b;
+    --job-background:#AAAAAA;
+    --news-background: #555555;
+    --accepted-answer-background: #1881C2;
+
+}
+
+body > .main.container {
+    width: 80%;
+}
+
+body {
+    font-size: 13px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url("/static/BANNER-BW-model_network_brainbow.png");
+}
+
+.answer-text{
+    display: none ;
+}
+.wmd-button > span {
+    background-image: url("/static/pagedown/bar-button.jpg") !important;
+}
+
+.ui.search > .ui.input{
+    width: 100%;
+}
+
+
+.add-comment.label {
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 88%;
+    background-color: #5cb85c;
+}
+
+
+.ui.text.menu .item.padded {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.answer-form {
+    display: none;
+}
+
+#menu-topics {
+    margin: 0px;
+    color: white;
+    border: 0px;
+    color: #54c8ff;
+}
+
+.no-box-shadow {
+    box-shadow: none !important;
+    -webkit-box-shadow: none;
+}
+
+.sorting {
+    min-height: 25px !important;
+    height: 36px;
+}
+
+#menu-topics .item {
+    color: #2a2b2b;
+    font-size: 1.1em;
+}
+
+
+
+#menu-topics .item.active {
+    color: #2a2b2b;
+}
+
+#menu-header {
+    border-bottom: 1px #4c4f52 solid;
+    margin-bottom: 0px;
+}
+
+#menu-header .item {
+    padding: 30px 20px 20px 20px;
+    font-size: 1.25em;
+}
+
+.hidden-answer {
+    display: none;
+}
+
+#logo {
+    padding: 0px !important;
+    margin: 0px;
+    background-color: transparent;
+    width: 220px;
+
+}
+
+
+.hide-preview {
+    display: inline;
+}
+
+
+.match {
+    width: max-content;
+}
+
+
+#menu-header .add-question:hover {
+    background-color: #eff0ef !important;
+    color: white;
+}
+
+.ui.button {
+    background-color: white;
+
+}
+
+#content-header {
+    color: #2a2b2b;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+p {
+    color: black
+}
+
+
+.accepted.label {
+    color: var(--accepted-answer-color) !important;
+
+}
+
+.accepted.answer.label {
+    background-color: var(--accepted-answer-background) !important;
+}
+
+
+.ui.question.label {
+    background-color: var(--quetion-background);
+    color: var(--label-color);
+}
+

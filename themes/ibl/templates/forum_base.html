@@ -1,0 +1,17 @@
+{% extends 'forum_base.html' %}
+{% load forum_tags %}
+{% load static %}
+{% block title %}Internation Brain Lab forum{% endblock %}
+{% block favicon %}
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon"/>
+{% endblock %}
+
+{% block cssfile %}
+    <link href="{% static 'theme.css' %}{% randparam %}" rel="stylesheet">
+{% endblock %}
+
+{% block topmenu %}
+
+        {% include "banners/menu-header.html" %}
+        {% include "banners/menu-topics.html" %}
+{% endblock %}

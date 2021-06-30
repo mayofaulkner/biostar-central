@@ -1,0 +1,55 @@
+{% load forum_tags %}
+{% load static %}
+
+
+<div class="ui labeled icon top attached evenly divided menu" id="menu-header" user-id="{{ request.user.id }}">
+
+
+    {% block headimg %}
+        <div class="header item" id="logo">
+            <a href="https://bioconductor.org/"><img class="ui image" src="{% static "IBL_LogoFinal.jpg" %}"></a>
+        </div>
+    {% endblock %}
+
+    <a class="item {% activate tab "home" %}" href="/">
+        <i class="home icon"></i> Home
+    </a>
+
+    <a class="item {% activate tab "latest" %}" href="{% url 'post_list' %}">
+        <i class="list icon"></i> Latest
+    </a>
+
+    <a class="item {% activate tab "tags" %} " href="{% url 'tags_list' %}">
+        <i class="tag icon"></i> Tags
+    </a>
+
+    <a class="item {% activate tab "community" %}" href="{% url 'community_list' %}">
+        <i class="address book icon"></i> Community
+    </a>
+
+    <a class="item  {% activate tab "about" %}" href="{% url 'pages' 'about' %}">
+        <i class="info circle icon"></i>About
+    </a>
+
+    <a class="item  {% activate tab "faq" %}" href="/info/faq/">
+        <i class="question circle icon"></i>FAQ
+    </a>
+
+    <div class="right menu">{% if user.is_authenticated %}
+        <a class="item  {% activate tab "profile" %}" href="{% url 'user_profile' user.profile.uid %}">
+            <i class="{% user_icon_css user %}"></i> {{ user.profile.name }}
+        </a>
+        <a class="item  {% activate tab "logout" %}" href="{% url 'logout' %}" id="new-post">
+            <i class="sign-out icon"></i> Log Out
+        </a>
+    {% else %}
+        <a class="item  {% activate tab "login" %}" href="{% url 'login' %}" id="new-post">
+            <i class="sign-in icon"></i> Log In
+        </a>
+        <a class="item {% activate tab "signup" %}" href="{% url 'signup' %}">
+            <i class="signup icon"></i> Sign Up
+        </a>
+    {% endif %}
+    </div>
+
+</div>
